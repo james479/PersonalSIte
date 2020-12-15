@@ -67,6 +67,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\custom.css" />
+    <Content Include="css\style.default.css" />
+    <Content Include="img\about.jpg" />
+    <Content Include="img\ein-steig.jpg" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\japan-mountains.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\marker.png" />
+    <Content Include="img\portfolio-1.jpg" />
+    <Content Include="img\portfolio-2.jpg" />
+    <Content Include="img\portfolio-3.jpg" />
+    <Content Include="img\portfolio-4.jpg" />
+    <Content Include="img\portfolio-5.jpg" />
+    <Content Include="img\portfolio-6.jpg" />
+    <Content Include="img\portfolio-7.jpg" />
+    <Content Include="img\portfolio-8.jpg" />
+    <Content Include="img\portfolio-9.jpg" />
+    <Content Include="img\template-mac.png" />
+    <Content Include="index.html" />
+    <Content Include="js\front.js" />
     <Content Include="resources\distribution\credits.txt" />
     <Content Include="resources\distribution\css\custom.css" />
     <Content Include="resources\distribution\css\style.default.css" />
@@ -133,6 +153,49 @@
     <Content Include="resources\distribution\vendor\popper.js\umd\popper-utils.min.js" />
     <Content Include="resources\distribution\vendor\popper.js\umd\popper.js" />
     <Content Include="resources\distribution\vendor\popper.js\umd\popper.min.js" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="vendor\jquery\core.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
+    <Content Include="vendor\lightbox2\css\lightbox.css" />
+    <Content Include="vendor\lightbox2\css\lightbox.min.css" />
+    <Content Include="vendor\lightbox2\images\close.png" />
+    <Content Include="vendor\lightbox2\images\loading.gif" />
+    <Content Include="vendor\lightbox2\images\next.png" />
+    <Content Include="vendor\lightbox2\images\prev.png" />
+    <Content Include="vendor\lightbox2\js\lightbox-plus-jquery.js" />
+    <Content Include="vendor\lightbox2\js\lightbox-plus-jquery.min.js" />
+    <Content Include="vendor\lightbox2\js\lightbox.js" />
+    <Content Include="vendor\lightbox2\js\lightbox.min.js" />
+    <Content Include="vendor\popper.js\esm\popper-utils.js" />
+    <Content Include="vendor\popper.js\esm\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\esm\popper.js" />
+    <Content Include="vendor\popper.js\esm\popper.min.js" />
+    <Content Include="vendor\popper.js\popper-utils.js" />
+    <Content Include="vendor\popper.js\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\popper.js" />
+    <Content Include="vendor\popper.js\popper.min.js" />
+    <Content Include="vendor\popper.js\umd\popper-utils.js" />
+    <Content Include="vendor\popper.js\umd\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\umd\popper.js" />
+    <Content Include="vendor\popper.js\umd\popper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +211,14 @@
     <Content Include="resources\distribution\vendor\jquery.cookie\component.json" />
     <Content Include="resources\distribution\vendor\jquery.cookie\cookie.jquery.json" />
     <Content Include="resources\distribution\vendor\popper.js\umd\poppper.js.flow" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="vendor\jquery.cookie\component.json" />
+    <Content Include="vendor\jquery.cookie\cookie.jquery.json" />
+    <Content Include="vendor\popper.js\umd\poppper.js.flow" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -158,6 +229,8 @@
   <ItemGroup>
     <Folder Include="resources\distribution\vendor\font-awesome\less\" />
     <Folder Include="resources\distribution\vendor\font-awesome\scss\" />
+    <Folder Include="vendor\font-awesome\less\" />
+    <Folder Include="vendor\font-awesome\scss\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
