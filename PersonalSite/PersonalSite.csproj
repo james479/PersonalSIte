@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -23,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,135 +69,118 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\custom.css" />
-    <Content Include="css\style.default.css" />
-    <Content Include="img\about.jpg" />
-    <Content Include="img\ein-steig.jpg" />
-    <Content Include="img\favicon.png" />
-    <Content Include="img\japan-mountains.jpg" />
-    <Content Include="img\logo.png" />
-    <Content Include="img\marker.png" />
-    <Content Include="img\portfolio-1.jpg" />
-    <Content Include="img\portfolio-2.jpg" />
-    <Content Include="img\portfolio-3.jpg" />
-    <Content Include="img\portfolio-4.jpg" />
-    <Content Include="img\portfolio-5.jpg" />
-    <Content Include="img\portfolio-6.jpg" />
-    <Content Include="img\portfolio-7.jpg" />
-    <Content Include="img\portfolio-8.jpg" />
-    <Content Include="img\portfolio-9.jpg" />
-    <Content Include="img\template-mac.png" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="images\computer-image.jpg" />
+    <Content Include="images\nature.jpg" />
+    <Content Include="images\user-avatar.png" />
     <Content Include="index.html" />
-    <Content Include="js\front.js" />
-    <Content Include="resources\distribution\credits.txt" />
-    <Content Include="resources\distribution\css\custom.css" />
-    <Content Include="resources\distribution\css\style.default.css" />
-    <Content Include="resources\distribution\img\about.jpg" />
-    <Content Include="resources\distribution\img\ein-steig.jpg" />
-    <Content Include="resources\distribution\img\favicon.png" />
-    <Content Include="resources\distribution\img\japan-mountains.jpg" />
-    <Content Include="resources\distribution\img\logo.png" />
-    <Content Include="resources\distribution\img\marker.png" />
-    <Content Include="resources\distribution\img\portfolio-1.jpg" />
-    <Content Include="resources\distribution\img\portfolio-2.jpg" />
-    <Content Include="resources\distribution\img\portfolio-3.jpg" />
-    <Content Include="resources\distribution\img\portfolio-4.jpg" />
-    <Content Include="resources\distribution\img\portfolio-5.jpg" />
-    <Content Include="resources\distribution\img\portfolio-6.jpg" />
-    <Content Include="resources\distribution\img\portfolio-7.jpg" />
-    <Content Include="resources\distribution\img\portfolio-8.jpg" />
-    <Content Include="resources\distribution\img\portfolio-9.jpg" />
-    <Content Include="resources\distribution\img\template-mac.png" />
-    <Content Include="resources\distribution\index.html" />
-    <Content Include="resources\distribution\js\front.js" />
-    <Content Include="resources\distribution\license.txt" />
-    <Content Include="resources\distribution\readme.txt" />
-    <Content Include="resources\distribution\vendor\bootstrap\css\bootstrap-grid.css" />
-    <Content Include="resources\distribution\vendor\bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="resources\distribution\vendor\bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="resources\distribution\vendor\bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="resources\distribution\vendor\bootstrap\css\bootstrap.css" />
-    <Content Include="resources\distribution\vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="resources\distribution\vendor\bootstrap\js\bootstrap.bundle.js" />
-    <Content Include="resources\distribution\vendor\bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="resources\distribution\vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="resources\distribution\vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="resources\distribution\vendor\font-awesome\css\font-awesome.css" />
-    <Content Include="resources\distribution\vendor\font-awesome\css\font-awesome.min.css" />
-    <Content Include="resources\distribution\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="resources\distribution\vendor\font-awesome\HELP-US-OUT.txt" />
-    <Content Include="resources\distribution\vendor\jquery.cookie\jquery.cookie.js" />
-    <Content Include="resources\distribution\vendor\jquery.cookie\MIT-LICENSE.txt" />
-    <Content Include="resources\distribution\vendor\jquery\core.js" />
-    <Content Include="resources\distribution\vendor\jquery\jquery.js" />
-    <Content Include="resources\distribution\vendor\jquery\jquery.min.js" />
-    <Content Include="resources\distribution\vendor\jquery\jquery.slim.js" />
-    <Content Include="resources\distribution\vendor\jquery\jquery.slim.min.js" />
-    <Content Include="resources\distribution\vendor\lightbox2\css\lightbox.css" />
-    <Content Include="resources\distribution\vendor\lightbox2\css\lightbox.min.css" />
-    <Content Include="resources\distribution\vendor\lightbox2\images\close.png" />
-    <Content Include="resources\distribution\vendor\lightbox2\images\loading.gif" />
-    <Content Include="resources\distribution\vendor\lightbox2\images\next.png" />
-    <Content Include="resources\distribution\vendor\lightbox2\images\prev.png" />
-    <Content Include="resources\distribution\vendor\lightbox2\js\lightbox-plus-jquery.js" />
-    <Content Include="resources\distribution\vendor\lightbox2\js\lightbox-plus-jquery.min.js" />
-    <Content Include="resources\distribution\vendor\lightbox2\js\lightbox.js" />
-    <Content Include="resources\distribution\vendor\lightbox2\js\lightbox.min.js" />
-    <Content Include="resources\distribution\vendor\popper.js\esm\popper-utils.js" />
-    <Content Include="resources\distribution\vendor\popper.js\esm\popper-utils.min.js" />
-    <Content Include="resources\distribution\vendor\popper.js\esm\popper.js" />
-    <Content Include="resources\distribution\vendor\popper.js\esm\popper.min.js" />
-    <Content Include="resources\distribution\vendor\popper.js\popper-utils.js" />
-    <Content Include="resources\distribution\vendor\popper.js\popper-utils.min.js" />
-    <Content Include="resources\distribution\vendor\popper.js\popper.js" />
-    <Content Include="resources\distribution\vendor\popper.js\popper.min.js" />
-    <Content Include="resources\distribution\vendor\popper.js\umd\popper-utils.js" />
-    <Content Include="resources\distribution\vendor\popper.js\umd\popper-utils.min.js" />
-    <Content Include="resources\distribution\vendor\popper.js\umd\popper.js" />
-    <Content Include="resources\distribution\vendor\popper.js\umd\popper.min.js" />
-    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
-    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="vendor\bootstrap\css\bootstrap.css" />
-    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
-    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="vendor\font-awesome\css\font-awesome.css" />
-    <Content Include="vendor\font-awesome\css\font-awesome.min.css" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="vendor\font-awesome\HELP-US-OUT.txt" />
-    <Content Include="vendor\jquery.cookie\jquery.cookie.js" />
-    <Content Include="vendor\jquery.cookie\MIT-LICENSE.txt" />
-    <Content Include="vendor\jquery\core.js" />
-    <Content Include="vendor\jquery\jquery.js" />
-    <Content Include="vendor\jquery\jquery.min.js" />
-    <Content Include="vendor\jquery\jquery.slim.js" />
-    <Content Include="vendor\jquery\jquery.slim.min.js" />
-    <Content Include="vendor\lightbox2\css\lightbox.css" />
-    <Content Include="vendor\lightbox2\css\lightbox.min.css" />
-    <Content Include="vendor\lightbox2\images\close.png" />
-    <Content Include="vendor\lightbox2\images\loading.gif" />
-    <Content Include="vendor\lightbox2\images\next.png" />
-    <Content Include="vendor\lightbox2\images\prev.png" />
-    <Content Include="vendor\lightbox2\js\lightbox-plus-jquery.js" />
-    <Content Include="vendor\lightbox2\js\lightbox-plus-jquery.min.js" />
-    <Content Include="vendor\lightbox2\js\lightbox.js" />
-    <Content Include="vendor\lightbox2\js\lightbox.min.js" />
-    <Content Include="vendor\popper.js\esm\popper-utils.js" />
-    <Content Include="vendor\popper.js\esm\popper-utils.min.js" />
-    <Content Include="vendor\popper.js\esm\popper.js" />
-    <Content Include="vendor\popper.js\esm\popper.min.js" />
-    <Content Include="vendor\popper.js\popper-utils.js" />
-    <Content Include="vendor\popper.js\popper-utils.min.js" />
-    <Content Include="vendor\popper.js\popper.js" />
-    <Content Include="vendor\popper.js\popper.min.js" />
-    <Content Include="vendor\popper.js\umd\popper-utils.js" />
-    <Content Include="vendor\popper.js\umd\popper-utils.min.js" />
-    <Content Include="vendor\popper.js\umd\popper.js" />
-    <Content Include="vendor\popper.js\umd\popper.min.js" />
+    <Content Include="js\index.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -203,22 +188,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="resources\distribution\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="resources\distribution\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
-    <Content Include="resources\distribution\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
-    <Content Include="resources\distribution\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
-    <Content Include="resources\distribution\vendor\font-awesome\fonts\FontAwesome.otf" />
-    <Content Include="resources\distribution\vendor\jquery.cookie\component.json" />
-    <Content Include="resources\distribution\vendor\jquery.cookie\cookie.jquery.json" />
-    <Content Include="resources\distribution\vendor\popper.js\umd\poppper.js.flow" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff" />
-    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
-    <Content Include="vendor\font-awesome\fonts\FontAwesome.otf" />
-    <Content Include="vendor\jquery.cookie\component.json" />
-    <Content Include="vendor\jquery.cookie\cookie.jquery.json" />
-    <Content Include="vendor\popper.js\umd\poppper.js.flow" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -227,16 +208,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="resources\distribution\vendor\font-awesome\less\" />
-    <Folder Include="resources\distribution\vendor\font-awesome\scss\" />
-    <Folder Include="vendor\font-awesome\less\" />
-    <Folder Include="vendor\font-awesome\scss\" />
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

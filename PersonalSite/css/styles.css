@@ -1,0 +1,315 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/*
+    Google Fonts
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Kaushan Script', cursive;
+*/
+
+:root {
+    --color-turquoise: rgb(100, 176, 158);
+    --color-dark-blue: rgb(10,25,47);
+    --color-light-blue: rgb(80, 84, 96);
+    --color-grey: rgb(168, 178, 209);
+    --color-twitter: rgb(29,161,242);
+    --color-linked-in: rgb(40,103,178);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    height: 80vh;
+    background-image: linear-gradient(rgba(10, 25, 47, .8), rgba(10, 25, 47, .8)), url(/images/computer-image.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.fa-twitter {
+    color: var(--color-twitter);
+}
+
+.fa-linkedin-in {
+    color: var(--color-linked-in);
+}
+
+
+/*#region navbar*/
+nav {
+    padding: 1rem 1.5rem;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+
+    .main-nav li {
+        text-align: center;
+        margin: 1rem auto;
+    }
+
+.nav-links, .nav-links-no-margin {
+    color: #fff;
+}
+
+    .nav-links:hover, .nav-links-no-margin:hover {
+        color: var(--color-grey);
+    }
+
+.fa-laptop-code {
+    color: var(--color-turquoise);
+}
+
+.nav-links, .nav-links-no-margin {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.fa-laptop-code {
+    display: none;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--color-turquoise);
+}
+
+.active {
+    display: block;
+}
+
+
+/*tablet and desktop version of nav media queries*/
+@media only screen and (min-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 1.875rem;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+        .main-nav li {
+            margin: 0;
+        }
+
+    .nav-links {
+        text-align: right;
+        font-size: 0.95rem;
+        margin-left: 2.5rem;
+    }
+
+    .fa-laptop-code {
+        padding: 0 5.5rem;
+        display: inline-block;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .logo {
+        padding-left: 2rem;
+        padding-top: .5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .nav-links, .nav-links-no-margin {
+        font-size: 1.5rem;
+    }
+
+    .fa-laptop-code {
+        margin-top: .4rem;
+    }
+}
+/*#endregion*/
+
+/*#region footer*/
+
+footer {
+    padding: 2rem 0;
+    background-color: var(--color-light-blue);
+}
+
+    footer p {
+        text-align: center;
+        color: var(--color-grey);
+        font-size: 0.8rem;
+    }
+
+/*media queries*/
+@media only screen and (min-width: 375px) {
+    footer p {
+        font-size: .85rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    footer p {
+        font-size: 1.6rem;
+    }
+}
+/*#endregion*/
+/*#region masthead*/
+.masthead {
+    padding-top: 7rem;
+}
+
+    .masthead h1 {
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+        color: var(--color-grey);
+    }
+
+    .masthead h2 {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        color: var(--color-light-blue);
+    }
+
+    .masthead h1, h2 {
+        text-align: center;
+    }
+
+.masthead-line {
+    border-bottom: solid 1px var(--color-turquoise);
+    width: 40%;
+    margin: auto;
+    border-top-width: 0px;
+    animation-name: line-animation;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    display: none;
+}
+
+@keyframes line-animation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+
+
+/*tablet and desktop version of masthead*/
+@media only screen and (min-width: 768px) {
+    .masthead {
+        padding-top: 8rem;
+    }
+
+        .masthead h1 {
+            font-size: 3.5rem;
+        }
+
+        .masthead h2 {
+            font-size: 2.8rem;
+        }
+
+    .masthead-line {
+        display: block;
+    }
+}
+
+/*#endregion*/
+
+/*#region about-me*/
+
+.about-me {
+    display: grid;
+    grid-template-columns: 1fr;
+    /*background-color: var(--color-dark-blue);*/
+    padding: 1rem 1.5rem;
+}
+
+    .about-me article h1 {
+        color: #000;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 1rem;
+        font-family: 'Kaushan Script', cursive;
+    }
+
+    .about-me article p {
+        color: var(--color-light-blue);
+        margin-bottom: 2.5rem;
+        line-height: 1.8rem;
+    }
+
+    .about-me aside {
+        display: none;
+    }
+
+/*media queries for tablet and laptop*/
+@media only screen and (min-width: 768px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+
+        .about-me aside {
+            display: block;
+            margin: auto;
+        }
+
+        .about-me article h1 {
+            font-size: 3.5rem;
+        }
+
+    .social-media-icons {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+        .social-media-icons i {
+            margin-left: 1rem;
+        }
+}
+
+@media only screen and (min-width: 1024px) {
+    .about-me {
+        padding: 2rem 5.5rem;
+    }
+
+        .about-me article h1 {
+            font-size: 5rem;
+        }
+
+        .about-me article p {
+            font-size: 1.4rem;
+        }
+}
+
+/*#endregion*/
