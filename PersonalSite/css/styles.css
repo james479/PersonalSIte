@@ -95,6 +95,7 @@ nav {
 }
 
 
+
 /*tablet and desktop version of nav media queries*/
 @media only screen and (min-width: 768px) {
     nav {
@@ -312,4 +313,41 @@ footer {
         }
 }
 
+/*#endregion*/
+
+/*#region projects*/
+
+.project-container {
+    padding: 2rem 5.5rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3.2rem;
+    margin: 0 auto;
+}
+
+.project h2 {
+    margin: .5rem 0;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.project p {
+    text-align: justify;
+}
+
+@media only screen and (min-width: 1024px) {
+    .project-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .project { 
+        width: 40%;
+    }
+}
 /*#endregion*/
